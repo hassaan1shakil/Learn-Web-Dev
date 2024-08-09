@@ -1,0 +1,31 @@
+--> Changing local host to personal IP Address to view on mobile
+--> Inline CSS used very rarely
+--> colspan and rowspan
+
+Core Web Vitals:
+
+1) CLS 
+2) LCP
+3) FID
+
+--> Responsiveness
+
+Forms:
+
+1) Keep Input Tag and Label's id same to sync them and make the labe clickable
+2) Keep names for radio buttons same mutually exclusive options
+3) Get & Post Requests
+
+--> ID also helps in Link Generation for Direct Access
+
+--> Preload in Audio: none, metadata, auto
+
+--> Namespace Declaration Required To Display Independent SVG Files
+    e.g., xmlns="http://www.imgur.com/ImagePath"
+    Imp: "It is http, not https"
+
+--> Embedding(videos, maps etc) can be done using iFrame
+
+--> Entities
+--> Pre Tag used for reserving spaces
+--> &nbsp;
