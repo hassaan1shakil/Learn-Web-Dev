@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+
+    <style>
+
+        .container{
+            display: flex;
+            background-color: lightblue;
+            width: 80vw;
+            height: 80vw;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            display: flex;
+            background-color: coral;
+            width: 10%;
+            height: 10%;
+            border: none;
+            border-radius: 200px;
+            justify-content: center;
+            align-items: center;
+
+            /* animation: first_animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out ;
+            animation-delay: 0.5s;
+            animation-direction: alternate;
+            animation-play-state: running; 
+            animation-fill-mode: forwards; */
+
+            transform-origin: 0px 0px;
+            
+
+            animation: first_animation 2s ease-in-out 0.5s infinite alternate, second_animation 2s 0.5s infinite;
+        }
+
+        @keyframes first_animation {
+            
+            from{
+                background-color: red;
+            }
+
+            to{
+                background-color: yellow;
+            }
+        }
+
+        @keyframes second_animation {
+
+            0%{
+                transform: rotate(18deg) translate(60px);
+            }
+
+            5%{
+                transform: rotate(36deg) translate(60px);
+            }
+
+            10%{
+                transform: rotate(54deg) translate(60px);
+            }
+
+            15%{
+                transform: rotate(72deg) translate(60px);
+            }
+
+            20%{
+                transform: rotate(90deg) translate(60px);
+            }
+
+            25%{
+                transform: rotate(108deg) translate(60px);
+            }
+
+            30%{
+                transform: rotate(126deg) translate(60px);
+            }
+
+            35%{
+                transform: rotate(144deg) translate(60px);
+            }
+
+            40%{
+                transform: rotate(162deg) translate(60px);
+            }
+
+            45%{
+                transform: rotate(180deg) translate(60px);
+            }
+
+            50%{
+                transform: rotate(198deg) translate(60px);
+            }
+
+            55%{
+                transform: rotate(216deg) translate(60px);
+            }
+
+            60%{
+                transform: rotate(234deg) translate(60px);
+            }
+
+            65%{
+                transform: rotate(252deg) translate(60px);
+            }
+
+            70%{
+                transform: rotate(270deg) translate(60px);
+            }
+
+            75%{
+                transform: rotate(288deg) translate(60px);
+            }
+            
+            80%{
+                transform: rotate(306deg) translate(60px);
+            }
+
+            85%{
+                transform: rotate(324deg) translate(60px);
+            }
+
+            90%{
+                transform: rotate(342deg) translate(60px);
+            }
+
+            100%{
+                transform: rotate(360deg) translate(60px);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box">
+
+            <h3>Boxy</h3>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
