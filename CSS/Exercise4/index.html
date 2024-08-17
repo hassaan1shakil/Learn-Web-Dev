@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multicolor Navbar</title>
+
+    <style>
+
+        :root{
+            --bg_color: black;
+            --nav_color: darkgray;
+            --text-color: white;
+            --nav-text-color: black;
+        }
+
+        /* :root{
+            --bg_color: white;
+            --nav_color: black;
+            --text-color: black;
+            --nav-text-color: white;
+        } (For Light Theme) */
+
+        body{
+            background-color: var(--bg_color);
+            margin:0;
+        }
+
+        .nav{
+            background-color: var(--nav_color);
+            padding: 1px 0px;
+            position: sticky;
+            top: 0px;
+            color: var(--nav-text-color);
+        }
+
+        ul{
+            display: flex;
+            list-style: none;
+        }
+
+        li{
+            padding-right: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h1{
+            color: var(--text-color);
+            text-align: center;
+            padding-bottom: 10px ;
+        }
+
+        p{
+            color: var(--text-color);
+            font-size: 28px;
+            padding: 10px 30px;
+            text-align: center;
+        }
+
+        img{
+            width: 80vw;
+            height: 70vh;
+            padding-left: 10vw;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Products</li>
+            <li>Contact</li>
+            <li>Search</li>
+        </ul>
+    </div>
+
+    <div>
+
+        <h1>Welcome To The NASA Archive</h1>
+
+        <img src="dark-room.jpg" alt="Dark Room" width="1400px">
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, deleniti adipisci velit autem recusandae, nisi eligendi perspiciatis voluptates, temporibus saepe dolorem tempore qui architecto quam soluta quia. Cum ullam nihil sunt deleniti atque placeat esse, rem doloremque at molestias ratione iste odit iure maxime totam ea, obcaecati ducimus harum perspiciatis illo! Sed iste delectus consequatur illum excepturi aliquam omnis sequi, pariatur quos debitis dicta tempore ad voluptatum exercitationem odit animi quae nulla saepe? Cum nulla reprehenderit minus optio quibusdam delectus mollitia sit adipisci dolor cumque. Mollitia natus tempora accusantium at temporibus explicabo maiores, suscipit eius, fugiat quae quis libero corporis?</p>
+
+    </div>
+    
+</body>
+</html>
