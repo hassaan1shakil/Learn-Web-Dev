@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerceise 7</title>
+
+    <style>
+
+        /* Navbar */
+
+        * {
+            font-family: sans-serif;
+        }
+
+        header {
+            background-color: white;
+            position: sticky;
+            top: 0px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            font-size: 18px;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2.5vh 0vw;
+        }
+
+        .logo img {
+            height: 7vh;
+        }
+
+        .nav-link ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link ul li {
+            list-style: none;
+            padding-right: 2vw;
+        }
+
+        .nav-link a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .nav-link a:hover {
+            cursor: pointer;
+        }
+
+        /* Text */
+
+        .text-box{
+            text-align: center;
+            padding: 5vh 0vw 5vh 0vw;
+        }
+
+        .text-box span{
+            font-size: 60px;
+        }
+
+        #bold-name{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .text-box p{
+            font-size: 28px;
+            padding-top: 5vh;
+            padding-bottom: 4vh;
+        }
+
+        .text-box button{
+            font-size: 16px;
+            font-weight: bold;
+            padding: 2vh;
+            border: 1px solid;
+            border-radius: 10px;
+            color: white;
+            background-color: rgb(26, 193, 215);
+        }
+
+        .text-box p{
+            width: 65vw;
+            margin: auto;
+        }
+
+        /* Download Links */
+
+        .links{
+            display: grid;
+            height: 80vh;
+            grid-template-columns: 20vw 20vw 20vw;
+            justify-content: center;
+            row-gap: 3vh;
+            column-gap: 2vw;
+        }
+
+        .link-item{
+            width: 100%;
+            background-color: rgb(245, 245, 245);
+            justify-self: center;
+            text-align: center;
+        }
+
+        .link-item h3{
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 1vh;
+        }
+
+        .link-item h4{
+            font-size: 14px;
+            font-weight: normal;
+            padding-bottom: 1.5vh;
+        }
+
+        .link-item button{
+            padding: 1.5vh;
+            margin-bottom: 2vh;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        .download-text{
+            display: flex;
+            margin: 3vh 0vw 3vh 17vw;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .download-text img{
+            width: 5%;
+            margin: 0px 1vw;
+        }
+
+        .download-text h2{
+            font-size: 26px;
+            font-weight: normal;
+            margin-right: 0.5vw;
+        }
+
+        .download-text a{
+            text-decoration: none;
+            color: black;
+        }
+
+        @media screen and (max-width: 990px) {
+            
+            /* Download Links */
+
+            .links{
+                display: grid;
+                height: auto;
+                grid-template-columns: 90vw;
+                justify-content: center;
+                row-gap: 3vh;
+            }
+
+            /* Navbar */
+
+            header {
+                background-color: white;
+                position: sticky;
+                top: 0px;
+            }
+    
+            nav {
+                display: flex;
+                font-size: 80%;
+                justify-content: space-around;
+                align-items: center;
+                padding: 2.5vh 0vw;
+                overflow: hidden;
+            }
+    
+            .logo img {
+                height: 7vh;
+                padding-left: 55vw;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+
+                <img src="ultraedit-logo.png" alt="ultraedit-logo">
+
+            </div>
+
+            <div class="nav-link">
+
+                <ul>
+                    <a href="">
+                        <li>
+                            Product &#x2193;
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            Pricing &#x2193;
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            Resources &#x2193;
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            About Us &#x2193;
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            Security and compliance
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            <img src="language-icon.jpeg" alt="language-icon" width="40px">
+                        </li>
+                    </a>
+
+                </ul>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <article>
+
+        <div class="text-box">
+
+            <span>Download <span id="bold-name">UltraEdit</span> for Windows <a href="https://www.g2.com/products/ultraedit/reviews/"><img decoding="async" src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" width="112" height="32" alt="Reviews" class="wp-image-1613 alignnone size-full"></a></span>
+
+            <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</p>
+
+            <a href="ultraedit-logo.png"><button>DOWNLOAD MAC OR LINUX VERSION</button></a>
+
+        </div>
+
+    </article>
+
+    <main>
+
+        <div class="download-text">
+
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_white.png" alt="ultra-edit-logo">
+
+            <h2>Download UltraEdit</h2> <span>v2024.0(released 04/19/2024) | <a href="https://www.ultraedit.com/updates/uehotfix/">HotFix</a></span>
+
+        </div>
+
+        <div class="links">
+
+            <div class="link-item">
+
+                <h3>English</h3>
+                <h4>&nbsp;</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>Deutsch</h3>
+                <h4>German</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>Italiano</h3>
+                <h4>Italian</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>Español</h3>
+                <h4>Spanish</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>français</h3>
+                <h4>French</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>Português brasileiro</h3>
+                <h4>Brazilian Portuguese</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>日本</h3>
+                <h4>Japanese</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>한국어</h3>
+                <h4>Korean</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>中国</h3>
+                <h4>Chinese</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+
+            <div class="link-item">
+
+                <h3>中國</h3>
+                <h4>Traditional Chinese</h4>
+                <a href="ue_english_64.exe"><button>Download 64-bit</button></a>
+
+            </div>
+            
+        </div>
+
+    </main>
+
+</body>
+</html>
