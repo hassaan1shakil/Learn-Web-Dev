@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+
+    <style>
+
+        :root{
+            --inintial_x_pos: 3px;
+            --local_x: 0px;
+        }
+
+        .container{
+            display: flex;
+            background-color: lightblue;
+            width: 90vw;
+            height: 40vw;
+            justify-content: flex-start;
+            align-items: end;
+        }
+
+        .box{
+            background-color: coral;
+            width: 5.5%;
+            height: 12%;
+            border: none;
+            border-radius: 200px;
+
+            position: relative;
+
+            /* animation: first_animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out ;
+            animation-delay: 0.5s;
+            animation-direction: alternate;
+            animation-play-state: running; 
+            animation-fill-mode: forwards; */
+
+            animation: animate_X 6s linear infinite, animate_Y 1s ease-out infinite alternate, animate_Y 1s ease-out 2s infinite alternate, animate_Y 1s ease-out 4s infinite alternate;
+        }
+
+        @keyframes animate_X {
+            
+            from{
+                left: 0;
+            }
+
+            to{
+                left: 90%;
+            }
+        }
+
+        @keyframes animate_Y {
+            
+            from{
+                bottom: 0;
+            }
+
+            to{
+                bottom: 70%;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

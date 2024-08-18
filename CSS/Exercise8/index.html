@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+
+    <style>
+
+        :root{
+            --inintial_x_pos: 3px;
+            --local_x: 0px;
+        }
+
+        .container{
+            display: flex;
+            background-color: lightblue;
+            width: 80vw;
+            height: 80vw;
+            justify-content: flex-start;
+            align-items: end;
+        }
+
+        .box{
+            background-color: coral;
+            width: 5%;
+            height: 5%;
+            border: none;
+            border-radius: 200px;
+
+            /* animation: first_animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out ;
+            animation-delay: 0.5s;
+            animation-direction: alternate;
+            animation-play-state: running; 
+            animation-fill-mode: forwards; */
+
+            animation: _animation 0.75s cubic-bezier(.45,.05,.55,.95) 1 forwards, _animation 0.75s cubic-bezier(.45,.05,.55,.95) 0.75s 1 forwards, _animation 0.75s cubic-bezier(.45,.05,.55,.95) 1.5s 1 forwards;
+        }
+
+        @keyframes _animation {
+
+            0%{
+                --local_x: var(--inintial_x_pos);
+            }
+
+            5%{
+                transform: translateX(3px) translateY(-15px);
+            }
+
+            10%{
+                transform: translateX(6px) translateY(-29px);
+            }
+
+            15%{
+                transform: translateX(9px) translateY(-42px);
+            }
+
+            20%{
+                transform: translateX(12px) translateY(-54px);
+            }
+
+            25%{
+                transform: translateX(15px) translateY(-65px);
+            }
+
+            30%{
+                transform: translateX(18px) translateY(-75px);
+            }
+
+            35%{
+                transform: translateX(21px) translateY(-84px);
+            }
+
+            40%{
+                transform: translateX(24px) translateY(-92px);
+            }
+
+            45%{
+                transform: translateX(27px) translateY(-97px);
+            }
+
+            50%{
+                transform: translateX(30px) translateY(-97px);
+            }
+
+            55%{
+                transform: translateX(30px) translateY(-92px);
+            }
+
+            60%{
+                transform: translateX(36px) translateY(-84px);
+            }
+
+            65%{
+                transform: translateX(39px) translateY(-75px);
+            }
+
+            70%{
+                transform: translateX(42px) translateY(-65px);
+            }
+
+            75%{
+                transform: translateX(45px) translateY(-54px);
+            }
+            
+            80%{
+                transform: translateX(48px) translateY(-42px);
+            }
+
+            85%{
+                transform: translateX(51px) translateY(-29px);
+            }
+
+            90%{
+                transform: translateX(54px) translateY(-15px);
+            }
+
+            95%{
+                transform: translateX(57px) translateY(-5px);
+            }
+
+            100%{
+                transform: translateX(60px) translateY(0px);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
