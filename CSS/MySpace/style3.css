@@ -1,0 +1,139 @@
+#header_form {
+    background-color: darkblue;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+}
+
+#header_div {
+    background-color: lightblue;
+    font-size: 18px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+#header_div > a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#search_text {
+    width: 1150px;
+}
+
+.box {
+    padding: 5px;
+    border: 4px solid black;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    width: 900px;
+    margin-top: 20px;
+}
+
+.box2 {
+    border: 4px solid rgba(3, 80, 195, 0.735);
+    color:darkblue;
+    font-size: 15px;
+    font-weight: 600;
+    width: 450px;
+    margin-top: 20px;
+}
+
+.box3 {
+    border: 2px solid rgb(49, 173, 214);
+    font-size: 15px;
+    width: 430px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.box3 > p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.box4 {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    width: 450px;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+
+#contact_box{
+    background-color: rgba(3, 80, 195, 0.735);
+    color: white;
+    font-size: 17px;
+    font-weight: 1000;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.item1 {
+    grid-area: image;
+}
+
+.item2 {
+    grid-area: desc;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.item3 {
+    grid-area: links;
+}
+
+.item4 {
+    grid-area: main;
+    margin-left: 100px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'image desc main main main main'
+        'links links main main main main';
+
+    grid-template-rows: 300px auto;
+}
+
+.grid-container>div {
+    padding: 30px;
+}
+
+#main_links {
+    font-family: comic sans-serif;
+    font-size: 18px;
+}
+
+#main_article {
+    font-family: comic sans-serif;
+    font-size: 18px;
+}
+
+#blurb {
+    background-color: rgba(248, 187, 106, 0.785);
+    padding: 3px;
+}
+
+.orange_h4 {
+    color: rgb(255, 106, 0);
+}
+
+.green_text {
+    color: green;
+    font-weight: 600;
+}
+
+.blue_text {
+    color: blue;
+    font-weight: 600;
+}
+
+.highlight_text {
+    font-weight: 600;
+}
