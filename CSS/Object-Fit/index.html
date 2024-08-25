@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-Fit & Position</title>
+
+    <style>
+
+        .container{
+            height: 20vh;
+            width: 25vw;
+            background-color: lightblue;
+            border: 2px solid red;
+        }
+
+        .container img{
+            width: 100%;
+            height: 100%;
+            /* object-fit: fill; */
+            /* object-fit: contain; */
+            object-fit: contain;
+            /* object-position: top right; */
+            object-position: 20px 30px;
+        }
+
+        .container2{
+            height: 20vh;
+            width: 25vw;
+            margin: 10%;
+            border: 2px solid black;
+
+            background-image: url("https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" );
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-clip: border-box;
+            background-size: cover;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+
+    </div>
+
+    <div class="container2">
+
+    </div>
+    
+</body>
+</html>
