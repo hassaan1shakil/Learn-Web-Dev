@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors 2</title>
+
+    <style>
+
+        .box:first-child{
+            background-color: lightblue;
+        }
+
+        .box::first-line{
+            color: blue;
+        }
+
+        /* Selecting All Elements within an element */
+
+        .boxes *{
+            border: 2px solid pink;
+        }
+
+        /* Attribute Selector */
+
+        [priority="imp-box"]{
+            background-color: coral;
+            padding: 10px;
+        }
+
+        /* Grouping of Selctors 
+
+        a, p, .box, [priority="imp-box"]{
+            background-color: red;
+            padding: 10px;
+        } */
+
+        /* .box:nth-child(even){
+            background-color: brown;
+        } */
+
+        /* .box:nth-last-child(2){
+            background-color: brown;
+        } */
+
+        /* Before & After --- Pseudo Elemments */
+
+        .boxes::before{
+            content: "Welcome To Boxes";
+            background-color: yellow;
+        }
+
+        .boxes::after{
+            content: "Thanks for Visiting Boxes";
+            background-color: yellow;
+        }
+
+        .box::first-letter{
+            font-size: 30px;
+            color: red;
+        }
+
+        input:placeholder-shown{
+            color:red;
+            font-size: 30px;
+        }
+
+        /* Selection Decoration */
+
+        ::selection{
+            color:aqua;
+            background-color: black;padding: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="boxes">
+        <div class="box">Box Box</div>
+        <div priority="imp-box" class="box">Box Box</div>
+        <div class="box">Box Box</div>
+    </div>
+
+    <input type="text" placeholder="Type some words here">
+    
+</body>
+</html>
