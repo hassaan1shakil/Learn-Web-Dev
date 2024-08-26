@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+
+         /* Element Selector 
+         
+         div{
+            
+         } */
+
+        /* Class Selector */
+
+        .red{
+            background-color: red;
+        }
+
+        /* ID Selector */
+
+        #green{
+            color: green;
+        }
+
+        /* Child Selector */ 
+
+        div > p{
+
+            color: coral;
+            background-color: lightblue;
+        }
+
+        /* Descendant Selector (Priority given to whichever comes last)*/
+
+        div p{
+
+            color: rgb(70, 212, 19);
+            background-color: rgb(190, 34, 221);
+        }
+
+        /* Universal Selector */ 
+
+        *{
+
+            margin: 0;
+            padding: 0;    
+        }
+
+        /* Universal Selector */ 
+
+        /*a:active, a:hover, p:first-child etc.*/
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="red">
+        Class Selector...
+    </div>
+
+    <div id="green">Not Red using ID Selector</div>
+
+    <div>
+        <p>This is a sample paragraph using Child Selector</p>
+    </div>
+
+</body>
+</html>
