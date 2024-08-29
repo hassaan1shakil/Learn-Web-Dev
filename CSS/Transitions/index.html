@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+
+    <style>
+
+        .container{
+            width: 70vw;
+            height: 50vh;
+            background-color: coral;
+        }
+
+        .box{
+            width: 20%;
+            height: 20%;
+            background-color: lightblue;
+
+            /* 4 Transition Properties */
+
+            transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s;
+
+            /* Shorthand Transition Syntax 
+            
+            transition: all 3s ease-in-out 1s*/
+        }
+
+        .translate{
+            transform: translateX(100%) scale(2);
+            background-color: red;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box translate">
+
+            I am a color changing, moving boxy hehe
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
