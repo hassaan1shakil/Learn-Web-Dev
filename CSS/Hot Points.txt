@@ -1,0 +1,262 @@
+--> Preference in Selectors is being given to the one that comes last
+    e.g., between "div > p" & "div p"
+
+--> Box Sizing Property
+--> Margin is not part of the Content's width or height
+
+--> Margin Collapse: In case of Overlapping Margins of Elements, only the MAx Margin will be Added Once
+
+--> Fallback Fonts
+
+Custom Fonts (from Google Fonts):
+
+    1) Import using style tag
+    2) link using urls
+
+--> Text Decrations are very versatile
+
+--> Colors
+
+    1) Color Keyword
+    2) Hex Color Code
+    3) RGB
+    4) RGBA (A = Alpha = Opacity)
+    5) HSL (Hue, Saturation, Lightness)
+    6) HSLA (Hue, Saturation, Lightness, Alpha)
+
+
+--> Cascading Algorithm
+
+    1) Position & Order
+    2) Inline > ID Selector > Class/Attribute > Element > Universal
+    3) Origin of CSS (user-written-stylesheet, user-agent-stylesheet)
+    4) !important keyword for overriding even Inline Selectors
+
+--> Calculating Specificity is very essential
+
+--> Sizing Units (mdn-web-docs)
+
+    1) px
+    2) vw / vh  (Important in Responsiveness)
+    3) rem (root element aka html) / em (parent element)
+    4) vmin / vmax (Device-Specific Scenarios)
+    5) Percentage % (%age of parent element)
+    6) min-height / min-width
+
+--> Div to Inline
+
+--> Inline Block Elements allow width, padding & width changes
+
+--> display:none vs visibility:hidden
+
+--> Flex
+
+--> Grid
+
+--> Element & Text Shadows
+
+--> Outline vs Border
+
+--> Styling Lists
+
+    1) list-style
+    2) list-style-image
+    3) list-style-type (for emojis or other types ig)
+    4) list-style: disc inside url("www.google.com") --> This is used for defining all the properties inline
+
+--> CSS Overflow Property
+
+    1) scrollbar with & without "auto"
+    2) Overflow vs Text Overflow
+    3) Auto works fine most of the time
+
+--> CSS Position Property
+
+    1) Static Position
+    2) Relative Position (position relative to normal position)
+    3) Absolute Position (position set according to nearest positioned ancestor)
+    4) Fixed Position (to fix an element on the screen especially when scrolling)
+    5) Sticky Position (to fix an element so that other element flow into or out of it. Mainli used for Navbars. Will only stick when the scrollbar reaches it)
+    6) Z-Index
+
+    --> Transform, Filter & Perspective Properties also make the elements appear as positioned to their childs affecting the output
+
+--> Variables
+        
+    1) Global Variables using :root
+    2) Local Variables for overwriting Globals
+    3) Fallback Values for variables
+
+--> Media Queries (Required For Responsiveness)
+
+    1) Syntax: @media screen not | only mediatype and (expressions)
+    2) Speech devices are also common
+    3) Orientation is also used in media queries for potrait/landscape views
+
+--> Float
+
+    1) Float images or other containers to a specific direction relative to other elements
+    2) display: flow-root allows a floating image to take not overflow from the parent container
+    3) Used for blogs, newspapers previously but not that popular nowadays
+
+--> Clear
+
+    1) Used to clear the space of other elements in any direction
+
+--> Avoid Using Floats & Clears in Modern Layouts
+
+--> Selectors Advanced
+
+    1) Pseudo-Classes (:)
+    2) Pseudo-Elements (::)
+    3) Attribute Selectors [any-name="any-text"]
+    4) Grouping using Commas
+    5) nth-child properties (last, even, odd)
+    6) ::before & ::after properties used for dynamic insertion of content before and after the main content 
+    7) Selection For Decorating Text
+    8) Targetting placeholders in input etc.
+
+
+--> Flexbox
+
+    // Container Properties
+
+    1) Flexbox Properties are applied to the container, not individual items
+    2) Justify Content for Main Axis
+    3) Align Items for Cross Axis
+
+        --> Main Axis: Parallel to Flex Direction
+            --> Main Start // Main End // Main Size
+
+        --> Cross Axis: Perpendicular to Flex Direction
+            --> Cross Start // Cross End // Cross Size
+
+    4) Space Around / Space Between / Space Evenly --> (Justify Content)
+    5) Baseline / Vertical Align
+    6) Items are laid in the "Flex Direction"
+    7) Flex Wrap for dealing with Overflow
+    8) Align-Content: used for multiple lines of content in casae of flex wrap
+    9) Flex Flow combines flex-direction && flex-wrap
+    10) Gap for providing gap between items
+        --> Explicity row-gap && column-gap can be defined OR gap: row-gap column-gap
+
+    // Item Properties
+
+    1) Order defines the order of occurence of items in the flexbox. Lower Order --> Higher Priority. "Default Order = 0"
+    2) Flex Grow: defines the space an item takes relative to other items. e.g., "flex-grow: 2" means an item will take double the spapce. By default, it is equal to 1
+    3) Flex Shrink is the ability of an item to shrink if necessary. e.g., if flex wrap is turned off and the resolution decreases, the item will shrink only till the max shrink value
+    4) Align-Self: works on a single item but does not work if align-content OR align-items is applied on container
+
+
+--> Grid
+
+    // Container Properties
+
+    1) Grid Lines // Grid Cells
+    2) Grid Area: can be any area in the Grid
+    3) Grid Track: area between 2 grid lines (row or column lines)
+
+        --> Grid Lines are numbered [1].....[n] by default
+            --> In reverse, they are [-n]....[-1]
+
+        --> Grid Lines can also be named if convenient
+
+    4) Naming Grid Lines 
+
+        --> grid-row-template: [first] 10px [second] 10px
+
+    5) fr --> Fractional Unit for dividing the grid rows or columns in fractions of total width or height
+    6) Gap for providing gap between items
+        --> Explicity row-gap && column-gap can be defined OR gap: row-gap column-gap
+    7) Justify-items && align-items can also be used like flexbox for aligning items WITHIN THE CELL
+    8) Repeat Property --> grid-template-column: repeat(5, 1fr) 
+    9) minmax --> grid-template-column: repeat(5, minmax(100px, 1fr))
+    10) Place-Content (Justify-Content + Align-Content): used to align the entire grid. Useful when the grid takes up less space than the container
+
+    // Approach 2
+
+    1) Grid Template Area --> define grid using strings
+
+    
+    // Item Properties
+
+    1) Items can be positioned using grid-row && grid-column values as "1/2" (Overlapping can also be achieved using this)
+        --> grid-row-start, grid-column-end etc can also be used
+    
+    2) Align-Self: works on a single item but only within its OWN CELL
+
+    // Approach 2
+
+    2) grid-area: to define the name of the area
+
+
+--> Transforms
+
+    1) rotate()
+        --> Units: 45deg, 0.25turn
+
+    2) Rotation in X, Y & Z axes
+    3) Scale Transformation
+    4) Skew Transformation --> Only in X & Y axes with an Angle
+    5) Translate Property for moving an element
+    6) Multiple Transformation --> transform: transform1() transform2().....
+    7) Negative Values in some Transformations used for Opposite  Direction
+    8) Transform Origin: used for transfroming with respect to a certain position
+
+
+--> Transitions
+
+    1) transition-property: property1, property2,.....; --> "all" keyword used for transitioning all the properties
+    2) transition-duration: ; --> (time in seconds)
+    3) transition-timing-function: ; (type of transition) --> Dev Tools allow Modifying Existing Funcs && Custom Funcs as well
+    4) transition-delay: ; --> (time in seconds)
+
+    5) Short-hand transition syntax ----> transition: all 3s eas-in-out 1s;
+
+--> Transitions
+
+    1) animation: first_animation;
+    2) animation-duration: 2s;
+    3) animation-iteration-count: infinite;
+    4) animation-timing-function: ease-in-out ;
+    5) animation-delay: 0.5s;
+    6) animation-direction: alternate;
+    7) animation-play-state: running; 
+    8) animation-fill-mode: forwards;
+
+    9) Short-hand animation syntax ----> animation: first_animation 2s ease-in-out 0.5s infinite alternate, second_animation 2s 0.5s infinite forwards;
+
+
+--> Object-Fit 
+
+    All the Properties Apply on the Width/Height given to the image or the ones it inherits
+
+    1) Cover: covers the entire width/height even if some clipping is required (Aspect-Ratio IS Maintained but whole image is not displayed)
+    2) Contain: contains the image in the defined space even if some space is left (Aspect-Ratio IS Maintained)
+    3) Fill (by-default): fills the whole given space (Aspect-Ratio NOT Maintained)
+    4) Scale-down: scales down the image
+
+--> Object-Position : explicitly states the portion of image to be displayed in case of "object-fit: cover;" 
+
+    1) top, right, left, bottom keywords can be used
+    2) values of px, % can also be used
+
+
+--> Background
+
+    1) background-image: url("");
+    2) background-position: center center;
+    3) background-repeat: no-repeat / repeat-x;
+    4) background-clip: border-box / padding;
+    5) background-size: cover / contain;
+
+
+--> Filters
+
+    1) Blur
+    2) Opacity
+    3) Brightness
+    4) Grayscale
+    5) Sepia
+
+    etc....
