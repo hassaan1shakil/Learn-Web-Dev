@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+    
+        .sun{
+            height: 20vh;
+            width: 20vh;
+            border-radius: 360px;
+            background-color: rgb(217, 217, 172);
+        }
+
+        .sun:hover{
+            cursor: pointer;
+        }
+
+        .glowing-sun{
+            background-color: orange;
+            box-shadow: 0px 0px 100px 20px rgb(241, 110, 49);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sun">
+
+        </div>
+
+    </div>
+
+    <script>
+
+        let sun = document.querySelector(".sun");
+
+        sun.addEventListener("click", () => {
+            sun.classList.toggle("glowing-sun");
+        });
+
+    </script>
+    
+</body>
+</html>

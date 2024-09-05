@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    * {
+        margin: 0;
+    }
+
+    .container{
+        display: flex;
+        gap: 10vh;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        height: 100vh;
+    }
+
+    button{
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        padding: 1vh;
+        border-radius: 7px;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+    .red-btn{
+        background-color: red;
+    }
+
+    .green-btn{
+        background-color: rgb(7, 194, 7);
+    }
+
+    .blue-btn{
+        background-color: rgb(53, 53, 215);
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <button class="red-btn">Click Me</button>
+
+        <button class="green-btn">Click Me</button>
+
+        <button class="blue-btn">Click Me</button>
+
+    </div>
+
+    <script>
+
+        document.querySelector(".red-btn").addEventListener("click", () => {
+            alert("Red Power has been activated. Sit back & relax.")
+        })
+
+        document.querySelector(".green-btn").addEventListener("click", () => {
+            alert("You have awakened the Green Machine. Nature will take its course.")
+        })
+
+        document.querySelector(".blue-btn").addEventListener("click", () => {
+            alert("Blue Sea has unleashed the tsunami. Get in the Boat!")
+        })
+
+    </script>
+    
+</body>
+</html>
