@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <style>
+
+        .box{
+            height: 20vh;
+            width: 20vw;
+            border: 2px solid black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+        
+        console.log(document.body.childNodes);
+
+        console.log(document.body.firstChild);
+
+        console.log(document.body.lastChild);
+
+        console.log(document.body.lastElementChild);       // Element Selection
+
+        console.log(document.body.lastElementChild.parentElement);
+
+        // console.log(document.body.lastElementChild.children);
+        console.log(document.body.lastElementChild.children[2]);
+
+        console.log(document.body.lastElementChild.children[2].nextElementSibling);
+        console.log(document.body.lastElementChild.children[2].previousElementSibling);
+
+    </script>
+
+    <div class="container">
+
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+
+    </div>
+    
+</body>
+</html>
