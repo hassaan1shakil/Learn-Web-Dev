@@ -1,0 +1,1 @@
+A better solution for this exercise would have been to create a  HTML template and then use template string literal to return that html from the createCard function and only keep the parameters as variables in the template literal :)
