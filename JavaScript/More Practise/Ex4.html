@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+
+        body{
+            color: white;;
+            background-color: black;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            height: 100vh;
+            justify-content: center;
+        }
+
+        .time{
+            text-align: center;
+            font-size: 50px;
+            border: 2px solid white;
+            margin: 0px 27%;
+            padding: 1cqw;
+        }
+
+        .calendar{
+            text-align: center;
+            font-size: 40px;
+            border: 2px solid white;
+            margin: 1vh 27%;
+            padding: 2vh;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="time"></div>
+
+        <div class="calendar"></div>
+
+    </div>
+
+    <script>
+
+        let today = new Date();
+        console.log(today)
+
+        let time = document.querySelector(".time");
+        let calendar = document.querySelector(".calendar");
+
+        setInterval(() => {
+            
+            today.setSeconds(today.getSeconds() + 1);   // Increment Time
+
+            time.innerHTML = today.toLocaleTimeString();
+            
+            calendar.innerHTML = today.toDateString();
+
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

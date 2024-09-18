@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Alarm Clock</title>
+
+    <style>
+
+        body{
+            color: white;;
+            background-color: black;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            color: white;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            gap: 1vh;
+        }
+
+        .time{
+            text-align: center;
+            font-size: 50px;
+            border: 2px solid white;
+            padding: 2vw 0;
+            width: 35vw;
+        }
+
+        .calendar{
+            text-align: center;
+            font-size: 40px;
+            border: 2px solid white;
+            padding: 2vh 0;
+            width: 35vw;
+        }
+
+        .alarm{
+            width: 25vw;
+            margin: 2vh;
+            font-size: 30px;
+            background-color: gray;
+            border: none;
+            border-radius: 30px;
+            padding: 1vh;
+        }
+
+        .alarm:hover{
+            cursor: pointer;
+            background-color: rgb(105, 104, 104);
+        }
+
+        .alarm-text{
+            font-size: 20px;
+            font: bolder;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="time"></div>
+
+        <div class="calendar"></div>
+
+        <button class="alarm">Set Alarm</button>
+
+       <div class="alarm-text"></div>
+
+    </div>
+
+    <script>
+
+        let today = new Date();
+        console.log(today)
+
+        let time = document.querySelector(".time");
+        let calendar = document.querySelector(".calendar");
+
+        setInterval(() => {
+            
+            today.setSeconds(today.getSeconds() + 1);   // Increment Time
+
+            time.innerHTML = today.toLocaleTimeString();
+            
+            calendar.innerHTML = today.toDateString();
+
+        }, 1000);
+
+        // Alarm Config
+
+        let hours = 1000;
+        let min = 1000;
+        let sec = 1000;
+
+        let text;
+        const ringtone = new Audio("alarm_test.mp3");
+
+        alarm_button = document.querySelector(".alarm");
+
+        alarm_button.addEventListener("click", () => {
+
+            hours = prompt("Enter the hour for alarm: ");
+            min = prompt("Enter the minute for alarm: ");
+            sec = prompt("Enter the second for alarm: ");
+
+            today.setSeconds(today.getSeconds() + Math.floor((new Date() - today) / 1000));     // Properly Update The Time when Prompt Blocks the Code Execution
+
+            text = document.querySelector(".alarm-text");
+            text.innerHTML = "Alarm Set For " + hours + ":" + min + ":" + sec;
+        });
+
+        setInterval(() => {
+
+            if (today.getHours() == hours && today.getMinutes() == min && today.getSeconds() == sec){
+
+                ringtone.play();
+                alert("Wake Up!!!");
+                text.innerHTML = "";
+
+                if (confirm("Turn off Alarm?")){
+                    ringtone.pause();
+                }
+
+                today.setSeconds(today.getSeconds() + Math.floor((new Date() - today) / 1000));     // Properly Update The Time when Prompt Blocks the Code Execution
+            }
+
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>

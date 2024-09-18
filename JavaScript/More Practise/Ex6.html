@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5vh;
+            width: 25vw;
+            height: 100vh;
+            background-color: rgb(134, 67, 172);
+        }
+
+        button {
+            font-size: 25px;
+            border: none;
+            border-radius: 20px;
+            padding: 1vh 1vw;
+            color: whi;
+            background-color: rgb(247, 176, 44);
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: rgb(237, 159, 14);
+        }
+
+        .text-area {
+            width: 100%;
+            font-size: 24px;
+            background-color: rgb(175, 132, 200);
+            padding: 4vh 2vw 0vh 2vw;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="buttons">
+
+            <button id="add-task">Add Task</button>
+            <button id="remove-task">Remove Task</button>
+            <button id="clear-tasks">Clear All Tasks</button>
+
+        </div>
+
+        <div class="text-area">
+
+            Try Adding a Task..
+            <p>Task 1: Make Pizza</p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        let no_tasks = 0;
+        let tasks_array = [];
+
+        class Task {
+
+            constructor(desc) {
+                this._id = ++no_tasks;
+                this._description = desc;
+            }
+        }
+
+        function display_tasks() {
+
+            let tasks = document.querySelector(".text-area");
+
+            tasks.innerHTML = "";
+
+            for (let i = 0; i < tasks_array.length; i++) {
+
+                let para = document.createElement("p");
+                para.innerHTML = "Task " + (tasks_array[i]._id) + ": " + tasks_array[i]._description;
+                tasks.appendChild(para);
+            }
+        }
+
+        let add_btn = document.querySelector("#add-task");
+        let remove_btn = document.querySelector("#remove-task");
+        let clear_btn = document.querySelector("#clear-tasks");
+
+        add_btn.addEventListener("click", () => {
+
+            let input = prompt("Please Provide the Task: ");
+            tasks_array.push(new Task(input));
+
+            display_tasks();
+        })
+
+        remove_btn.addEventListener("click", () => {
+
+            let input = prompt("Please Provide the Task No. to delete: ");
+
+            if (input.length > 0) {
+
+                let i = 0;
+
+                while (i < tasks_array.length && tasks_array[i]._id != parseInt(input)) {
+                    i++;
+                }
+
+                if (i != tasks_array.length) {
+                    tasks_array.splice(i, 1);   // removes the task at index 'i'
+                    no_tasks--;
+                }
+
+                display_tasks();
+            }
+
+            //let index = tasks_array.findIndex((obj) => {
+            //obj._id == parseInt(input);
+            //})
+            //console.log("Index", index);
+
+            // Does splice alos delete the object do it no longer takes space???
+        })
+
+        clear_btn.addEventListener("click", () => {
+
+            tasks_array = [];
+            no_tasks = 0;
+            display_tasks();
+        })
+
+    </script>
+
+</body>
+
+</html>
