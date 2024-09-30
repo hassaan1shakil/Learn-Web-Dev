@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Selectors</title>
+
+    <style>
+
+        .box{
+            height: 10vh;
+            width: 10vw;
+            margin: 3vh;
+            color: white;
+            background-color: purple;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div id="fourth-box" class="box">4</div>
+        <div class="box">5</div>
+
+    </div>
+
+    <script>
+
+        let boxes = document.getElementsByClassName("box");
+        console.log(boxes);
+        boxes[2].style.backgroundColor = "red";
+
+
+        let fourth_box = document.getElementById("fourth-box");
+        fourth_box.style.backgroundColor = "yellow";
+
+
+        document.querySelector(".box").style.backgroundColor = "green";     // will only choose the first occurence
+
+        // For Loop with query selector
+
+        document.querySelectorAll(".box").forEach(e => {
+            e.style.backgroundColor = "darkgray";
+        });
+
+
+        // Miscellaneous Selectors
+
+        e  = document.getElementsByTagName("div");
+
+        // matches
+
+        e[4].matches("#fourth-box"); // returns true
+
+        // closest
+
+        e[3].closest("html");
+        e[3].closest(".container");
+
+        // contains
+
+        e[0].contains(e[2]);
+        document.querySelector(".container").contains(document.querySelector("#fourth-box"));
+
+        document.querySelector("#fourth-box").contains(document.querySelector("#fourth-box"));   // Self-Check
+
+
+    </script>
+    
+</body>
+</html>
